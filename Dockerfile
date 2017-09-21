@@ -1,2 +1,4 @@
 FROM ubuntu:latest
-RUN mkdir multiarchTrial
+
+RUN dpkgArch="$(dpkg --print-architecture)"; \
+    echo $dpkgArch;
